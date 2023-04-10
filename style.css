@@ -1,0 +1,371 @@
+/*    1. Use a more-intuitive box-sizing model. */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*     2. Remove default margin   */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*    3. Allow percentage-based heights in the application    */
+html,
+body {
+    height: 100%;
+}
+
+/*     4. Improve media defaults   */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*     5. Remove built-in form typography styles   */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*     6. Avoid text overflows   */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* ------------------------------ */
+
+:root {
+    --font-dark: hsl(210, 10%, 33%);
+    --font-light: hsl(201, 11%, 66%);
+
+}
+
+* {
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-align: center;
+    line-height: 1.7;
+}
+
+h2 {
+    color: var(--font-dark);
+}
+
+p {
+    color: var(--font-light);
+    font-size: 12px;
+}
+
+body {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.introduction {
+    padding-top: 3rem;
+
+    background-image: url(./images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+}
+
+#Clipboard_logo {
+    padding-bottom: 1rem;
+}
+
+button {
+    border: none;
+    border-radius: 2rem;
+    width: 12rem;
+    height: 3rem;
+    color: white;
+
+
+}
+
+button:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.6rem;
+    padding-top: 1rem;
+
+
+}
+
+.ios_button {
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 5px 5px 15px hsla(171, 66%, 44%, 0.5);
+}
+
+.mac_button {
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: 5px 5px 20px hsla(233, 100%, 69%, 0.5);
+}
+
+.description {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+
+[data-26-width] {
+    max-width: 26rem;
+}
+
+
+
+.features {
+    display: flex;
+    gap: 3rem;
+    padding-top: 3rem;
+}
+
+#computer_pic {
+
+    object-fit: contain;
+}
+
+.features_detials {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    max-width: 25rem;
+    padding-top: 3rem;
+
+}
+
+[data-left-align] {
+    text-align: left;
+    font-size: 16px;
+}
+
+.access {
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.access-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding-bottom: 5rem;
+}
+
+.supercharge-detials {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.supercharge-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 4rem;
+
+
+}
+
+.supercharge-item {
+    max-width: 25rem;
+
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 17rem;
+}
+
+[data-supercharge-text] {
+    font-size: 0.8rem;
+
+}
+
+.brands {
+    padding-top: 7rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#extra-space {
+    padding-bottom: 0.7rem;
+}
+
+nav {
+    background-color: rgb(245, 246, 248);
+
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+
+
+    padding: 3rem 0;
+}
+
+.small-logo {
+    max-width: 5rem;
+    max-height: 4.4rem;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+
+
+#social-media {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+
+[data-turquesa]:hover {
+    color: rgb(38, 187, 164);
+
+    fill: #26bba4
+}
+
+footer p {
+    color: black;
+}
+
+
+
+@media (max-width: 375px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .introduction {
+        background-image: url("./images/bg-header-mobile.png");
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 1rem;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding-top: 3rem;
+
+    }
+
+    [data-left-align] {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .supercharge-features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding-top: 4rem;
+    }
+
+    .brands {
+        padding-top: 7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    
+
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    #social-media{
+        padding-top: 1rem;
+    }
+
+    
+
+   
+
+
+
+
+
+}
